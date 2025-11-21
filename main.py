@@ -18,11 +18,12 @@ class MyWidget(QWidget):
         self.update()
 
     def paintEvent(self, event):
-        painter = QPainter()
-        painter.begin(self)
-        painter.setPen(QColor('yellow'))
-        r = randint(10, 100)
-        painter.drawEllipse(250, 250, r, r)
+        if self.do_draw:
+            painter = QPainter()
+            painter.begin(self)
+            painter.setPen(QColor('yellow'))
+            r = randint(10, 100)
+            painter.drawEllipse(250, 250, r, r)
 
 
 if __name__ == '__main__':
