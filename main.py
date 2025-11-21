@@ -21,7 +21,7 @@ class MyWidget(QWidget):
         if self.do_draw:
             painter = QPainter()
             painter.begin(self)
-            painter.setPen(QColor('yellow'))
+            painter.setPen(QColor(randint(0, 255), randint(0, 255), randint(0, 255)))
             r = randint(10, 100)
             painter.drawEllipse(250, 250, r, r)
 
